@@ -1,0 +1,44 @@
+var x; // declaring x
+console.log(x); //output: undefined 
+
+var y; // Declaration
+if(typeof y === 'undefined') {}// Will return true
+
+//If a variable that is neither declared nor defined, when we try to reference such a variable we'd get the result not defined.
+
+console.log(z); 
+
+var k = 1;
+  if (1) {
+    eval(function foo(){});
+    k += typeof foo;
+  }
+  console.log(k); // output 1undefined
+
+  var k = 1;
+  if (1) {
+    function foo(){};
+    k += typeof foo;
+  }
+  console.log(k); // output 1function
+
+
+var z = 1, y = z = typeof y;
+console.log(y);
+//output undefined
+
+var foo = function bar(){ return 12; };
+typeof bar();
+
+//output Reference Erro
+
+var bar = function (){ return 12; };
+console.log(typeof bar());
+// anonymous function
+
+function bar1(){ return 12; };
+console.log(typeof bar1()); 
+//Ouput
+// Number
+
+
